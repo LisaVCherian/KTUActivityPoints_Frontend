@@ -33,7 +33,7 @@ const Profile = () => {
                 </div>
                 {/* <button className="flex ml-96 mt-24 bg-slate-200 px-10 py-2 rounded-lg shadow-sm">Edit</button> */}
                 <div className="absolute bottom-4 right-6 p-2">
-                    <button className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full px-4 py-2">
+                    <button className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full px-4 py-2 hover:bg-[#e9161d]">
                     <FaPencilAlt className="mr-2 h-4" />
                         Edit
                     </button>
