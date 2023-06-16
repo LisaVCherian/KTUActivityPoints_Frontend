@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
 const studentsData = [
-  { rollNo: 1, name: 'John Doe', className: 'CS6A', activityType: 'Internship', activityPoints: 80 },
-  { rollNo: 2, name: 'Jane Smith', className: 'CS6A', activityType: 'Workshop', activityPoints: 10 },
-  { rollNo: 3, name: 'Mike Johnson', className: 'CS6A', activityType: 'Webinar', activityPoints: 60 },
-  { rollNo: 4, name: 'John Doe', className: 'CS6A', activityType: 'Internship', activityPoints: 50 },
-  { rollNo: 5, name: 'Jane Smith', className: 'CS6A', activityType: 'Workshop', activityPoints: 50 },
-  { rollNo: 6, name: 'Mike Johnson', className: 'CS6A', activityType: 'Webinar', activityPoints: 60 },
-  { rollNo: 7, name: 'John Doe', className: 'CS6A', activityType: 'Internship', activityPoints: 100 },
-  { rollNo: 8, name: 'Jane Smith', className: 'CS6A', activityType: 'Workshop', activityPoints: 80 },
-  { rollNo: 9, name: 'Mike Johnson', className: 'CS6A', activityType: 'Webinar', activityPoints: 80 },
-  { rollNo: 10, name: 'John Doe', className: 'CS6A', activityType: 'Internship', activityPoints: 70 },
-  { rollNo: 11, name: 'Jane Smith', className: 'CS6A', activityType: 'Workshop', activityPoints: 60 },
-  { rollNo: 12, name: 'Mike Johnson', className: 'CS6A', activityType: 'Webinar', activityPoints: 80 },
-  { rollNo: 13, name: 'John Doe', className: 'CS6A', activityType: 'Internship', activityPoints: 100 },
-  { rollNo: 14, name: 'Jane Smith', className: 'CS6A', activityType: 'Workshop', activityPoints: 100 },
-  { rollNo: 15, name: 'Mike Johnson', className: 'CS6A', activityType: 'Webinar', activityPoints: 50 },
+  { rollNo: 1, name: 'student1', className: 'CS6A', activityType: 'Internship', activityPoints: 80 },
+  { rollNo: 2, name: 'student2', className: 'CS6A', activityType: 'Workshop', activityPoints: 10 },
+  { rollNo: 3, name: 'student3', className: 'CS6A', activityType: 'Webinar', activityPoints: 60 },
+  { rollNo: 4, name: 'student4', className: 'CS6A', activityType: 'Internship', activityPoints: 50 },
+  { rollNo: 5, name: 'student5', className: 'CS6A', activityType: 'Workshop', activityPoints: 50 },
+  { rollNo: 6, name: 'student6', className: 'CS6A', activityType: 'Webinar', activityPoints: 60 },
+  { rollNo: 7, name: 'student7', className: 'CS6A', activityType: 'Internship', activityPoints: 100 },
+  { rollNo: 8, name: 'student8', className: 'CS6A', activityType: 'Workshop', activityPoints: 80 },
+  { rollNo: 9, name: 'student9', className: 'CS6A', activityType: 'Webinar', activityPoints: 80 },
+  { rollNo: 10, name: 'student10', className: 'CS6A', activityType: 'Internship', activityPoints: 70 },
+  { rollNo: 11, name: 'student11', className: 'CS6A', activityType: 'Workshop', activityPoints: 60 },
+  { rollNo: 12, name: 'student12', className: 'CS6A', activityType: 'Webinar', activityPoints: 80 },
+  { rollNo: 13, name: 'student13', className: 'CS6A', activityType: 'Internship', activityPoints: 100 },
+  { rollNo: 14, name: 'student14', className: 'CS6A', activityType: 'Workshop', activityPoints: 100 },
+  { rollNo: 15, name: 'student15', className: 'CS6A', activityType: 'Webinar', activityPoints: 50 },
 ];
 
 const Filter = () => {

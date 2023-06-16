@@ -32,7 +32,7 @@ const Profile = () => {
                     aria-label="Change Profile"
                 /> */}
                 <div>
-                  <div className="flex items-center"><h1 className="text-[1.8rem] font-bold">Cynthia John</h1>
+                  <div className="flex items-center"><h1 className="text-[1.8rem] font-bold">Student1</h1>
                     <div className="text-gray-500 text-sm p-2">
                   <button className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full px-2 py-1">
                     <FaPencilAlt className="mr-0.5 h-4" />
@@ -42,7 +42,7 @@ const Profile = () => {
                     <div className="grid grid-cols-2 gap-x-14 gap-2 mt-4">
                         <p className="text-gray-500 text-sm">Registration ID: <span className="font-medium text-gray-700 text-base">MDL19CS321</span></p>
                         <p className="text-gray-500 text-sm">Class: <span className="font-medium text-gray-700 text-base">CS6A</span></p>
-                        <p className="text-gray-500 text-sm">Email: <span className="font-medium text-gray-700 text-base">cynthia@gmail.com</span></p>
+                        <p className="text-gray-500 text-sm">Email: <span className="font-medium text-gray-700 text-base">student1@gmail.com</span></p>
                         <p className="text-gray-500 text-sm">DOB: <span className="font-medium text-gray-700 text-base">22/05/2002</span></p>
                     
                     </div>

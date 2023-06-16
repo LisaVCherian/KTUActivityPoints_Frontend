@@ -3,6 +3,8 @@ import React, {useState} from "react";
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activityType, setActivityType] = useState('');
+  const [activityLevel, setActivityLevel] = useState('');
+  const [activityPrize, setActivityPrize] = useState('');
   const [files, setFiles] = useState([]);
   const [description, setDescription] = useState('');
 
@@ -26,6 +28,14 @@ const Modal = () => {
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
   };
+
+  const handleActivityLevelChange = (event) => {
+    setActivityLevel(event.target.value)
+  }
+
+  const handleActivityPrizeChange = (event) => {
+    setActivityPrize(event.target.value)
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -82,12 +92,55 @@ const Modal = () => {
                           <option value="">Select an option</option>
                           <option value="workshop">Workshop</option>
                           <option value="internship">Internship</option>
-                          <option value="sports">Arts</option>
-                          <option value="sports">Hackathon</option>
-                          <option value="sports">Webinar</option>
+                          <option value="arts">Arts</option>
+                          <option value="hackathon">Hackathon</option>
+                          <option value="webinar">Webinar</option>
                           <option value="sports">Sports</option>
                         </select>
                       </div>
+
+
+                      <div className="mt-2">
+                        <label htmlFor="activityLevel" className="block text-sm font-medium text-gray-700">
+                          Level
+                        </label>
+                        <select
+                          id="activityLevel"
+                          name="activityLevel"
+                          className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                          value={activityLevel}
+                          onChange={handleActivityLevelChange}
+                        >
+                          <option value="">Select an option</option>
+                          <option value="N/A">N/A</option>
+                          <option value="college">College</option>
+                          <option value="zonal">Zonal</option>
+                          <option value="state">State/University</option>
+                          <option value="national">National</option>
+                          <option value="international">International</option>
+                        </select>
+                      </div>
+
+                      <div className="mt-2">
+                        <label htmlFor="prize" className="block text-sm font-medium text-gray-700">
+                          Prize
+                        </label>
+                        <select
+                          id="activityPrize"
+                          name="activityPrize"
+                          className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                          value={activityPrize}
+                          onChange={handleActivityPrizeChange}
+                        >
+                          <option value="">Select an option</option>
+                          <option value="N/A">N/A</option>
+                          <option value="1">1st</option>
+                          <option value="2">2nd</option>
+                          <option value="3">3rd</option>
+                          <option value="participation">participation</option>
+                        </select>
+                      </div>
+
 
                       <div className="mt-4">
                         <label htmlFor="files" className="block text-sm font-medium text-gray-700">

@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ViewModal from './ViewModal';
 import Filter from './Filter';
 import AddStudents from './AddStudents';
+// import axios from 'axios';
+
+// const client = axios.create({
+//   baseURL: "http://43.205.228.231:8000"
+// });
+
 
 const TabContent = () => {
   const [activeTab, setActiveTab] = useState('tab1');
+  // const [students, setStudents] = useState([]);
+
+  // useEffect(()=>{
+  //   axios.get(baseURL).then()
+  // })
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -22,12 +33,12 @@ const TabContent = () => {
   ];
 
   const data2 = [
-    ['1', 'Abhishek Kurien', '75', '1'],
-    ['2', 'Abin Mathew', '50', '3'],
-    ['3', 'Achyuth Mohan', '40', '0'],
-    ['4', 'Adam Oommen Jacob', '70', '1'],
-    ['5', 'Aditya Anil', '60', '0'],
-    ['6', 'Adithya Kartha', '55', '2'],
+    ['1', 'student1', '75', '1'],
+    ['2', 'student2', '50', '3'],
+    ['3', 'student3', '40', '0'],
+    ['4', 'student4', '70', '1'],
+    ['5', 'student5', '60', '0'],
+    ['6', 'student6', '55', '2'],
   ]
   
 
@@ -104,6 +115,21 @@ const TabContent = () => {
                   </tr>
                 ))}
               </tbody>
+              {/* <tbody>
+                {client.get("/api/view-students")}
+
+                {students.map((student, index) => (
+                  <tr
+                    key={index}
+                    className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-200'}`}
+                  >
+                    <td className="px-36 py-4">{student.rollNo}</td>
+                    <td className="px-36 py-4">{student.name}</td>
+                    <td className="px-36 py-4">{student.activityPoints}</td>
+                    <td className="px-36 py-4">{student.pending}</td>
+                  </tr>
+                ))}
+              </tbody> */}
             </table>
           </div>
         );
@@ -125,20 +151,6 @@ const TabContent = () => {
             <AddStudents/>
           </div>
         );
-        // case 'tab5':
-        // return (
-        //   <div className='mx-16 bg-gray-50 p-10'>
-        //     <h2 className="font-primary text-2xl font-bold mb-4">Tab 5</h2>
-        //     <p>Content for Tab 4</p>
-        //   </div>
-        // );
-        // case 'tab6':
-        // return (
-        //   <div className='mx-16 bg-gray-50 p-10'>
-        //     <h2 className="font-primary text-2xl font-bold mb-4">Tab 6</h2>
-        //     <p>Content for Tab 4</p>
-        //   </div>
-        // );
       default:
         return null;
     }
