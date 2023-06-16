@@ -4,6 +4,7 @@ import dp from '../../assets/dp.jpg'
 import { FaPencilAlt } from 'react-icons/fa';
 import Modal from './Modal'
 import Progressbar from './Progressbar'
+import PdfButton from "./PdfButton";
 
 
 const data=[["1","12-07-2022","workshop","pdf","approved"],
@@ -34,7 +35,7 @@ const Profile = () => {
                 <div>
                   <div className="flex items-center"><h1 className="text-[1.8rem] font-bold">Cynthia John</h1>
                     <div className="text-gray-500 text-sm p-2">
-                  <button className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full px-2 py-1">
+                  <button className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full hover:bg-[#e9161d] px-2 py-1">
                     <FaPencilAlt className="mr-0.5 h-4" />
                     </button></div></div>
                     
@@ -50,8 +51,10 @@ const Profile = () => {
                 {/* <button className="flex ml-96 mt-24 bg-slate-200 px-10 py-2 rounded-lg shadow-sm">Edit</button> */}
                 <div className="text-gray-500 text-sm absolute top-4 right-6 p-2"><Progressbar/></div>
                 <div className="absolute bottom-4 right-6 p-2">
-                    <Modal/>
-                
+                    <Modal/>    
+                </div>
+                <div className="absolute bottom-6 right-40">
+                    <PdfButton/>
                 </div>
 
             </div>
@@ -77,17 +80,17 @@ const Profile = () => {
                     {row.map((cell, cellIndex) => (
         <td key={cellIndex} className="px-24 py-4">
           {cell === 'approved' && (
-            <span className="bg-green-200 px-4 py-0.5 rounded-full text-green-700 text-sm">
+            <span className="bg-green-200 px-7 py-0.5 rounded-full text-green-700 text-sm">
               {cell}
             </span>
           )}
           {cell === 'rejected' && (
-            <span className="bg-red-200 px-4 py-0.5  rounded-full text-red-600 text-sm">
+            <span className="bg-red-200 px-7 py-0.5  rounded-full text-red-600 text-sm">
               {cell}
             </span>
           )}
           {cell === 'pending' && (
-            <span className="bg-yellow-100 px-4 py-0.5  rounded-full text-yellow-600 text-sm">
+            <span className="bg-yellow-100 px-7 py-0.5  rounded-full text-yellow-600 text-sm">
               {cell}
             </span>
           )}
