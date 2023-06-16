@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 
-const Modal = () => {
+const Modal = ( { handleDataChange}) => {
+
+ 
   const [isOpen, setIsOpen] = useState(false);
   const [activityType, setActivityType] = useState('');
   const [activityLevel, setActivityLevel] = useState('');
@@ -31,6 +33,7 @@ const Modal = () => {
 
   const handleActivityLevelChange = (event) => {
     setActivityLevel(event.target.value)
+    console.log(event.target.value)
   }
 
   const handleActivityPrizeChange = (event) => {
@@ -45,6 +48,9 @@ const Modal = () => {
       files,
       description
     });
+
+    handleDataChange([activityType,activityLevel, activityPrize, "pdf","pending"])
+
     handleCloseModal();
   };
 

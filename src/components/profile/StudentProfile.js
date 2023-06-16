@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../layout/Navbar";
 import dp from '../../assets/dp.jpg'
 import { FaPencilAlt } from 'react-icons/fa';
@@ -18,7 +18,21 @@ const data=[["1","12-07-2022","workshop","pdf","approved"],
 
 
 
+
+
 const Profile = () => {
+
+  const [data, setData] = useState([["workshop","State","NA","pdf","rejected"],
+ ["sports","State","1","pdf","approved"],
+  ["workshop","State","NA","pdf","rejected"],
+ ["arts","Zonal","2","pdf","approved"],
+ ["internship","NA","NA","pdf","pending"],
+  ])
+
+  const handleDataChange = (student_list) => {
+    var new_array = [...data,student_list]
+    setData(new_array)
+  }
     return (
         <div>
             <Navbar/>
@@ -51,7 +65,7 @@ const Profile = () => {
                 {/* <button className="flex ml-96 mt-24 bg-slate-200 px-10 py-2 rounded-lg shadow-sm">Edit</button> */}
                 <div className="text-gray-500 text-sm absolute top-4 right-6 p-2"><Progressbar/></div>
                 <div className="absolute bottom-4 right-6 p-2">
-                    <Modal/>    
+                    <Modal handleDataChange={handleDataChange} />    
                 </div>
                 <div className="absolute bottom-6 right-40">
                     <PdfButton/>
@@ -62,16 +76,16 @@ const Profile = () => {
                 <table className="w-full">         
                 <thead className="border-b-2">
                 <tr className="bg-gray-50 text-sm">
-                  <th className="p-3">Sr.no</th>
-                  <th className="p-3">Date</th>
-                  <th className="p-3">ActivityType</th>
+                  <th className="p-3">Activity Type</th>
+                  <th className="p-3">Level</th>
+                  <th className="p-3">Prize</th>
                   <th className="p-3">Document</th>
                   <th className="p-3">Status</th>
 
                 </tr>
               </thead>
               <tbody>
-                {data.map((row, index) => (
+                {data?.map((row, index) => (
                   <tr
                     key={index}
                     className={`${index % 2 === 0 ? 'bg-gray-50  p-4' : 'bg-gray-200  '}`}

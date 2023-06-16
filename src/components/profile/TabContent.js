@@ -22,14 +22,14 @@ const TabContent = () => {
   };
 
   const data1 = [
-    ['John Doe', 'CSA', '2024', 'Workshop', '.doc'],
-    ['Jane Smith', 'ECB', '2024', 'Internship', '.doc'],
-    ['Mark Johnson', 'CSA', '2024', 'Sports', '.doc'],
-    ['Sarah Williams', 'CSA', '2024', 'Workshop', '.doc'],
-    ['David Brown', 'ECB', '2024', 'Arts', '.doc'],
-    ['David Brown', 'ECB', '2024', 'Arts', '.doc'],
-    ['David Brown', 'ECB', '2024', 'Arts', '.doc'],
-    ['David Brown', 'ECB', '2024', 'Arts', '.doc'],
+    ['student3', 'CSA', '2024', 'Workshop', '.doc'],
+    ['student1', 'ECB', '2024', 'Internship', '.doc'],
+    ['student5', 'CSA', '2024', 'Sports', '.doc'],
+    ['student2', 'CSA', '2024', 'Workshop', '.doc'],
+    ['student1', 'ECB', '2024', 'Arts', '.doc'],
+    ['student4', 'ECB', '2024', 'Arts', '.doc'],
+    ['student5', 'ECB', '2024', 'Arts', '.doc'],
+    ['student2', 'ECB', '2024', 'Arts', '.doc'],
   ];
 
   const data2 = [
@@ -38,7 +38,7 @@ const TabContent = () => {
     ['3', 'student3', '40', '0'],
     ['4', 'student4', '70', '1'],
     ['5', 'student5', '60', '0'],
-    ['6', 'student6', '55', '2'],
+    // ['6', 'student6', '55', '2'],
   ]
   
 
@@ -65,7 +65,7 @@ const TabContent = () => {
                     className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-200'}`}
                   >
                     {row.map((cell, cellIndex) => (
-                      <td key={cellIndex} className="px-9 py-4">
+                      <td key={cellIndex} className="px-24 py-4">
                         {cell}
                       </td>
                     ))}

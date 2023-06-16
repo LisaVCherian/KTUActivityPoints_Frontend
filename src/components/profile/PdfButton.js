@@ -11,10 +11,10 @@ const PdfButton = () => {
   return (
     
     <button
-      className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full px-4 py-2 hover:bg-[#e9161d]"
+      className="flex items-center bg-[#fd2d34] text-white font-bold rounded-full px-5 py-2 hover:bg-[#e9161d]"
       onClick={handleButtonClick}
     >
-      Open PDF
+      Rules
     </button>
   );
 };
